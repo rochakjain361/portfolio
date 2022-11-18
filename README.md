@@ -1,7 +1,7 @@
 ## $ whoami
 
-Hi! My name is Aman Sharma and I welcome you to my
-[share of the internet](https://algomaster99.github.io/). I created this
+Hi! My name is Rochak Jain and I welcome you to my
+[share of the internet](https://rochakjain.github.io/). I created this
 website to showcase my frontend skills and I really wanted to feel productive
 during COVID-19 lockdown :sweat_smile:.
 
