@@ -1,7 +1,7 @@
 ## $ whoami
 
 Hi! My name is Rochak Jain and I welcome you to my
-[share of the internet](https://rochakjain.github.io/). I created this
+[share of the internet](https://rochakjain361.github.io/). I created this
 website to showcase my frontend skills and I really wanted to feel productive
 during COVID-19 lockdown :sweat_smile:.
 
