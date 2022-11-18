@@ -1,0 +1,40 @@
+@use 'src/consts'
+@use 'src/styles/media'
+@use 'src/styles/theme'
+@use 'src/styles/transition'
+
+.header-container
+  align-items: flex-end
+  background: transparent
+  display: flex
+  height: 96px
+  width: 100%
+
+.header-title
+  display: flex
+  font-weight: bold
+  justify-content: space-between
+
+.header-diamond
+  @include theme.which-theme('background-color', 'diamond-colour-1')
+  @include transition.transition(consts.$transition-duration, background-color)
+  height: 180px
+  margin-left: -52px
+  opacity: 0.2
+  top: -64px
+  width: 180px
+
+.short-name
+  @include theme.which-theme('color', 'short-name')
+  @include transition.transition(consts.$transition-duration, color)
+  letter-spacing: 12px
+  text-transform: uppercase
+
+@include media.respond-below(sm)
+  .header-container
+    height: 40px
+
+  .header-diamond
+    height: 135px
+    margin-left: -28px
+    width: 135px

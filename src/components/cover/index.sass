@@ -1,0 +1,102 @@
+@use 'sass:math'
+
+@use 'src/consts'
+@use 'src/styles/media'
+@use 'src/styles/theme'
+@use 'src/styles/transition'
+@use 'src/styles/link'
+
+/* Image styles */
+$crop-size: 248
+$side: $crop-size / math.sqrt(2)
+$rotate-deg: 45deg
+
+$crop-size-sm: $crop-size / 1.4
+$side-sm: $crop-size-sm / math.sqrt(2)
+
+$crop-size-md: $crop-size / 1.2
+$side-md: $crop-size-md / math.sqrt(2)
+
+// Due to rotating the `image-cropper`
+$margin-error: 20px
+
+.cover-container
+  height: 100%
+
+.image-cropper
+  align-items: center
+  border-radius: 4px
+  display: flex
+  flex-shrink: 0 // By default, Chrome sets flex-shrink to 1 (:face-palm:)
+  height: #{$side}px
+  margin: 0 auto
+  margin-top: 20px + $margin-error
+  overflow: hidden
+  position: relative
+  transform: rotate($rotate-deg)
+  width: #{$side}px
+
+.me
+  @include link.set-link-style(a)
+  left: -45px
+  bottom: -20px
+  position: relative
+  transform: rotate(-$rotate-deg)
+  width: 280px
+
+.full-name
+  @include theme.which-theme('color', 'header')
+  @include transition.transition(consts.$transition-duration, color)
+  font-size: 3.75em
+  font-weight: bold
+  letter-spacing: 8px
+  line-height: 76px
+  margin-top: 1.5em
+  text-align: center
+  text-transform: uppercase
+
+.short-bio
+  @include theme.which-theme('color', 'content')
+  @include transition.transition(consts.$transition-duration, color)
+  @include link.set-link-style(a)
+  font-size: 1.5em
+  line-height: 36px
+  text-align: center
+
+.cover-button
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-top: 2.5em
+  width: 100%
+
+  a
+    flex-basis: 15%
+    margin: 0 1em
+
+@include media.respond-below(sm)
+  .full-name
+    font-size: 2em
+    letter-spacing: 0.04em
+    line-height: 38px
+    margin-top: 2em
+
+  .short-bio
+    font-size: 15px
+    line-height: 24px
+
+  .image-cropper
+    height: #{$side-sm}px
+    margin-top: 60px + $margin-error
+    width: #{$side-sm}px
+
+  .cover-button
+    margin-top: 3.2em
+
+    a
+      flex-basis: 25%
+
+@include media.respond-between(sm, md)
+  .image-cropper
+    height: #{$side-md}px
+    width: #{$side-md}px

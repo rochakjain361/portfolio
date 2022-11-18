@@ -1,0 +1,63 @@
+{
+  "name": "portfolio",
+  "version": "0.4.0",
+  "description": "Aman Sharma's slice of internet",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --hot",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "code-format": "eslint */**/*.{ts,tsx} --fix",
+    "style-format": "stylelint **/*.{sass,scss} --fix --custom-syntax sugarss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algomaster99/portfolio.git"
+  },
+  "author": "Aman Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/algomaster99/portfolio/issues"
+  },
+  "homepage": "https://github.com/algomaster99/portfolio#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "@types/react": "^16.9.29",
+    "@types/react-dom": "^16.9.5",
+    "@types/webpack": "^4.41.10",
+    "@types/webpack-dev-server": "^3.10.1",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.0.3",
+    "postcss-cli": "^7.1.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.4",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "stylelint": "^13.3.0",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "sugarss": "^2.0.0",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
